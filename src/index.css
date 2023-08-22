@@ -1,0 +1,554 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+  --primary: #7F7FD5;
+  --secondary: #91EAE4,; 
+  ;
+}
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: 'Open Sans', sans-serif;
+  background: rgb(62,62,64);
+  background: radial-gradient(circle, rgba(62,62,64,1) 0%, rgba(0,0,0,1) 100%);
+}
+* {
+  color: white;
+  margin: 0;
+}
+p {
+  text-align: center;
+  padding: 30px;
+  color: lightgrey;
+
+}
+button {
+  border: 0;
+  padding: 8px;
+  border-radius: 4px;
+  color: black;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* navbar */
+header nav {
+  display: flex;
+  gap: 16px;
+  justify-content: end;
+  font-size: 1.8em;
+  margin: 0 20px;
+}
+header nav h1 {
+  margin-right: auto;
+  
+}
+header nav a{
+  text-decoration: none;
+  padding: 6px;
+  border-radius: 4px;
+}
+header nav a.active {
+  background: transparent;
+  border: 3px solid red;
+
+}
+header nav a:hover{
+  font-size: 1em;
+  color: red;
+}
+
+
+/* page content */
+main {
+  max-width: 1600px;
+ margin: auto;
+}
+
+.home{
+  display: flex;
+  flex-direction: column;
+  margin-top: 18%;
+  font-family: 'Open Sans', sans-serif;
+}
+.about{
+  display: flex;
+  flex-direction: column;
+
+  
+}
+.about h1{
+  font-size: 3em;
+}
+.about .intro{
+  text-align: center;
+  border-bottom: solid 3px white;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+.about p{
+  color: white;
+  text-align: start;
+  font-size: 18px;
+}
+.about h2{
+  margin-bottom: 15px;
+}
+.about img{
+  height: 40px;
+  margin-left: 5px;
+  animation-duration: 4s;
+  animation-name: slidein;
+}
+.about h3{
+  font-size: 25px;
+}
+.about h4{
+  font-size: 25px;
+}
+@keyframes slidein{
+  from{
+    margin-left: 10%;
+  }
+  to{
+    margin-left: 5px;
+  }
+}
+.about h1{
+  text-align: center;
+}
+.text{
+  font-size: 50px;
+}
+.text2{
+  font-size: 45px;
+}
+.text3{
+  font-size: 40px;
+}
+
+
+/* services section styling*/
+.services .serv-content
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    
+    margin-top: 50px;
+}
+.services h2{
+  margin-left: 43%;
+}
+.services, .projects{
+  color: white;
+  background: none;
+  padding: 75px;
+}
+
+.services .serv-content .card{
+  width: calc(33% - 70px);
+ 
+  text-align: center;
+  border-radius: 6px;
+  padding: 20px 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.services .serv-content .card:hover{
+  background: lightblue;
+}
+.services .serv-content .card .box{
+  transition: all 0.3s ease;
+}
+.services .serv-content .card:hover .box{
+  transform: scale(1.05);
+}
+.services .serv-content .card i{
+  font-size: 50px;
+  color: lightblue;
+  transition: color 0.3s ease;
+}
+
+.services .serv-content .card:hover i{
+  color: white;
+}
+.services .serv-content .card .text{
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+
+
+/* help layout */
+.projects-layout nav {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 30px 0;
+  align-items: center;
+}
+.projects-layout h2{
+  margin-left: 45%;
+  font-size: 2em
+}
+.projects-layout p{
+  justify-content: center;
+  
+  align-items: center;
+}
+.projects-layout nav a{
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.projects-layout nav a:hover{
+  border-color: red
+}
+.projects-layout nav a.active {
+  background: red;
+}
+
+/* Mis */
+
+
+.card-container{
+   
+    
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  font-family: myFont;
+  padding-bottom: 60px;
+}
+
+
+.card-container .card-content{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+  
+
+.card{
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  width: 500px;
+  
+  margin: 0px;
+  border: solid 3px lavender;
+ 
+  
+
+}
+
+.card-image{
+  background-color: aqua;
+  height: 340px;
+  width: 500px;
+  
+  background-size: cover;
+}
+.car-1{
+  background-image: url(assets/useCase.png);
+}
+.car-2{
+  background-image: url(assets/analytics.png);
+}
+
+.card h2{
+  padding: 10px;
+ 
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 23px;
+  font-weight: 900;
+  
+
+}
+.bottom-card{
+  margin-right: 30%;
+  
+}
+
+.card:hover{
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  cursor: pointer;
+  transform: scale(1.03);
+  transition: all 1s ease;
+}
+.web{
+  width: 100%;
+  
+}
+
+span{
+  color: red;
+}
+
+/* contact form */
+form {
+  margin-top: 30px;
+}
+form input, form label span, form textarea {
+  display: block;
+}
+form input, form textarea {
+  margin-bottom: 30px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 0;
+  width: 300px;
+  color: var(--secondary);
+}
+form label span {
+  margin-bottom: 10px;
+}
+
+/* careers list */
+.careers > a {
+  display: block;
+  background: rgba(0,0,0,0.2);
+  padding: 20px;
+  border-radius: 4px;
+  margin: 20px 0;
+  text-decoration: none;
+}
+.careers > a:hover p {
+  color: var(--primary);
+}
+.careers p {
+  margin: 0;
+}
+.careers > a p:last-child {
+ font-size: 0.8em;
+ color: #bbb;
+}
+
+/* careers details */
+.career-details {
+  background: rgba(0,0,0,0.2);
+  padding: 20px;
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+/* breadcrumbs */
+.breadcrumbs {
+  max-width: 1400px;
+  margin: 20px auto;
+}
+.breadcrumbs > *{
+  display: inline-block;
+  margin-right: 10px;
+}
+.breadcrumbs .crumb:after {
+  content: '>';
+  margin-left: 10px;
+}
+.breadcrumbs .crumb:last-child:after {
+  display: none;
+}
+.breadcrumbs .crumb a {
+  color: white;
+}
+
+.carousel {
+  width: 100%;
+  height: 840px;
+  background-color: black;
+}
+.carouselInner {
+  height: 840px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+}
+.carouselInner .left{
+  flex: 5%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, );
+  display: grid;
+  place-items: center;
+  color: white;
+  cursor: pointer;
+}
+.carouselInner .center{
+  flex: 90%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: justify;
+  text-align-last: center;
+  
+}
+
+
+.carouselInner .right{
+  flex: 5%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, );
+  display: grid;
+  place-items: center;
+  color: white;
+  cursor: pointer;
+}
+
+
+.dataContainer{
+  background: #DCDCDC;
+ 
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dataContainer h1{
+  color: black;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  font-size: 2.5em;
+}
+.dataContainer h3{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 2em;
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
+}
+.dataContainer h4{
+  color: black;
+}
+.dataContainer .background{
+  height: 600px;
+  width: 100%;
+}
+
+.dataContainer .menu li a{
+  text-align: center;
+  list-style: none;
+  font-size: 18px;
+  color: black;
+}
+li{
+  padding: 5px;
+  color: black;
+}
+.dataContainer h4{
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 2em;
+  font-family: 'Times New Roman', Times, serif;
+  
+}
+
+.dataContainer p{
+  color: black;
+}
+.equipo{
+  width: 75%;
+  height: 75%;
+  
+}
+
+a:hover{
+  font-size: 20px;
+}
+.factors{
+  list-style: decimal;
+}
+
+.analytics{
+  width: 75%;
+  height: 75%;
+}
+
+
+.workoutContent{
+  display: flex;
+  flex-direction: row;
+}
+
+.workoutApp .workoutContent .left{
+  width: 50%;
+}
+ .workoutContent h2{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.workoutApp .workoutContent .left img{
+  height: 80px;
+  width: 80px;
+  object-fit: cover;
+  border: solid;
+  border-radius: 50%;
+  margin-left: 200px;
+  margin-top: 30px;
+
+}
+
+h7{
+  font-size: 35px;
+  margin-left: 30%;
+  font-weight: 900;
+  border-bottom: red 3px solid;
+}
+
+.workoutApp .workoutContent .right{
+  width: 45%;
+}
+.workoutApp .workoutContent .right .text{
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.workoutApp .workoutContent .right .text span{
+
+  color: lightblue;
+}
+.workoutApp .workoutContent .right p{
+  text-align: justify;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  text-align: center;
+}
+.workoutApp .workoutContent .right a{
+  display: inline-block;
+  background: w;
+  color: white;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 12px 60px;
+  font-weight: 900;
+  margin-top: 20px;
+  border-radius: 6px;
+
+  transition: all 0.3s ease;
+}
+
+.exicon{
+  background: white;
+}
+.github{
+  background: white;
+  border: white 3px solid;
+  border-radius: 10px;
+}
+.workoutApp .workoutContent .right a:hover{
+  color: lightblue;
+  background: none;
+}
+.workoutApp .workoutContent .right img{
+  height: 200px;
+}
+
