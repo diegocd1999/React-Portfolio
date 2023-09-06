@@ -12,7 +12,7 @@ export default function Portfolio() {
       <h2><span>PROJECTS</span></h2>
       <p>Series of personal projects consisting of full stack web apps, data analytics and system design with UML</p>
 
-      <nav>
+      <nav id="vite">
         <NavLink to="WorkoutTracker">Workout Tracker <br></br> Application </NavLink>
         <NavLink to="PortfolioWebsite">Portfolio <br></br> Website </NavLink>
         <NavLink to="Hotel">

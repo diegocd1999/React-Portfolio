@@ -12,6 +12,7 @@ export default function Hotel() {
 
 
     <div className="carousel">
+        <h1>Download PDF</h1>
         <div className="carouselInner" style={{backgroundImage: `url(${images[currImg].img})`}}>
         
             <div className="left" 

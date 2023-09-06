@@ -22,14 +22,7 @@ p {
   color: lightgrey;
 
 }
-button {
-  border: 0;
-  padding: 8px;
-  border-radius: 4px;
-  color: black;
-  background: transparent;
-  cursor: pointer;
-}
+
 
 /* navbar */
 header nav {
@@ -47,10 +40,14 @@ header nav a{
   text-decoration: none;
   padding: 6px;
   border-radius: 4px;
+  
 }
 header nav a.active {
   background: transparent;
-  border: 3px solid red;
+  color: red;
+  font-weight: 900;
+  box-shadow: red 0px 3px;
+
 
 }
 header nav a:hover{
@@ -59,7 +56,7 @@ header nav a:hover{
 }
 
 
-/* page content */
+/* home content */
 main {
   max-width: 1600px;
  margin: auto;
@@ -67,10 +64,90 @@ main {
 
 .home{
   display: flex;
-  flex-direction: column;
+  flex-direction: wrap;
   margin-top: 18%;
   font-family: 'Open Sans', sans-serif;
+ 
 }
+.home .home-left{
+  width: 50%;
+}
+button{
+  background: none;
+  border: 2px solid white;
+  
+  height: 80px;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-transform: uppercase;
+  padding: px 20px;
+  min-width:200px;
+  margin: px;
+  cursor: pointer;
+  transition: color 0.4s linear;
+  position: relative;
+}
+
+button:hover{
+  color: #fff;
+}
+button::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  z-index: -1;
+  transition: transform 0.5s;
+  transform-origin: 0 0;
+  transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
+}
+.btn1::before{
+  transform: scaleX(0);
+}
+.btn1:hover::before{
+  transform: scale(1);
+}
+.home .home-right{
+  width: 50%;
+  display: flex;
+  justify-content: end;
+  align-items:flex-start;
+  margin-top: -100px;
+
+}
+
+.home .home-right img{
+  border: black 3px solid;
+  border-radius: 50%;
+  height: 600px;
+}
+.icons{
+  display: flex;
+  flex-direction: row;
+  justify-content: baseline;
+  padding-left: 0px;
+  padding-top: 15%;
+  bottom: 0px;
+  
+}
+.icons img{
+  height: 100px;
+  
+
+  margin-right: 20px;
+ 
+}
+.icons img:hover {
+  height: 110px;
+  
+  
+}
+
+
+/* about */
 .about{
   display: flex;
   flex-direction: column;
@@ -125,6 +202,10 @@ main {
 }
 .text3{
   font-size: 40px;
+}
+.text3:hover{
+  font-size: 45px;
+  color: red;
 }
 
 
@@ -402,7 +483,7 @@ form label span {
 }
 
 
-.dataContainer{
+  .dataContainer{
   background: #DCDCDC;
  
   width: 100%;
@@ -460,9 +541,7 @@ li{
   
 }
 
-a:hover{
-  font-size: 20px;
-}
+
 .factors{
   list-style: decimal;
 }
@@ -473,82 +552,354 @@ a:hover{
 }
 
 
-.workoutContent{
-  display: flex;
-  flex-direction: row;
-}
-
-.workoutApp .workoutContent .left{
-  width: 50%;
-}
- .workoutContent h2{
+.workoutApp{
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
 }
-.workoutApp .workoutContent .left img{
-  height: 80px;
-  width: 80px;
-  object-fit: cover;
-  border: solid;
-  border-radius: 50%;
-  margin-left: 200px;
-  margin-top: 30px;
-
+.workoutContent{
+  border: 2px solid lightgray;
+  width: 650px;
 }
 
-h7{
-  font-size: 35px;
-  margin-left: 30%;
-  font-weight: 900;
-  border-bottom: red 3px solid;
-}
 
-.workoutApp .workoutContent .right{
-  width: 45%;
+.workoutApp .workoutContent .workoutTop h1 button{
+  background: gray;
+  border: none;
+  height: 50px;
+  
 }
-.workoutApp .workoutContent .right .text{
-  font-size: 28px;
-  font-weight: 600;
-  margin-bottom: 10px;
+.workoutTop{
+  height: 50px;
+  background: lightgray;
+  color: red;
+  
 }
-.workoutApp .workoutContent .right .text span{
-
-  color: lightblue;
+.workoutApp .workoutContent .workoutTop button{
+  background: white;
+  
 }
-.workoutApp .workoutContent .right p{
-  text-align: justify;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 20px;
+.workoutTop img{
+  height: 50px;
+}
+.workoutApp .workoutContent .workoutTop h1{
+  color: black;
   text-align: center;
 }
-.workoutApp .workoutContent .right a{
+.workoutBot{
+  height: 100.datapx;
+  border-top: 3px solid black;
+  background: lightgray; 
+  display: flex;
+  flex-direction: column;
+  
+}
+.stack{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0;
+}
+.workoutApp .workoutContent .workoutBot a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.workoutApp .workoutContent .workoutBot .stack li {
+  list-style: none;
   display: inline-block;
-  background: w;
-  color: white;
-  font-size: 25px;
-  font-weight: 500;
-  padding: 12px 60px;
-  font-weight: 900;
-  margin-top: 20px;
-  border-radius: 6px;
-
-  transition: all 0.3s ease;
+  color: black;
+  font-size: 1.5em;
+  text-align: center;
+  font-weight: 600;
+  font-family: 'Times New Roman', Times, serif;
+}
+.workoutMid{
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.workoutApp .workoutContent .workoutMid img{
+  height: 350px;
+  width: 600px;
 }
 
-.exicon{
-  background: white;
+.workoutApp .workoutContent .workoutBot img{
+  height: 60px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
-.github{
-  background: white;
-  border: white 3px solid;
-  border-radius: 10px;
+.workoutApp .workoutContent .workoutBot img:hover{
+  transform: scale(1.1);
 }
-.workoutApp .workoutContent .right a:hover{
-  color: lightblue;
-  background: none;
-}
-.workoutApp .workoutContent .right img{
-  height: 200px;
+.launchers{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
+@media (max-width: 500px){
+
+  header nav {
+    display: flex;
+    gap: 10px;
+    justify-content: start;
+    font-size: 1em;
+    margin: 0px 0px;
+  }
+  .home{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    margin-top: 30%;
+    font-family: 'Open Sans', sans-serif;
+  }
+  .home .home-right{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: -30px;
+  }
+  .home .home-left{
+    width: 100%;
+  }
+  .home .home-left img{
+    height: 70px;
+  }
+  .home .home-right img{
+    height: 10px;
+    border: black 3px solid;
+    border-radius: 50%;
+  }
+  
+  .text{
+    font-size: 25px;
+  }
+  .text2{
+    font-size: 20px;
+  }
+  .text3{
+    font-size: 20px;
+  }
+  .text3:hover{
+    font-size: 45px;
+    color: red;
+  }
+
+  .about h1{
+    font-size: 1.5em;
+    text-align: start;
+  }
+  .about .intro{
+    text-align: start;
+    border-bottom: solid 3px white;
+    margin-bottom: 20px;
+    margin-left: -50px;
+    font-size: 15px;
+    max-width: 390px;
+  }
+  .about p{
+    color: white;
+    
+    font-size: 18px;
+    text-align: start;
+    margin-left: -50px;
+    font-size: 15px;
+    max-width: 390px;
+  }
+  .about h2{
+    margin-bottom: 15px;
+    text-align: start;
+  }
+  .about img{
+    height: 40px;
+    margin-left:  -8px;
+    animation-duration: 4s;
+    animation-name: slidein;
+  }
+  .about h3{
+    font-size: 25px;
+    text-align: start;
+  }
+  .about h4{
+    font-size: 25px;
+    text-align: start;
+  }
+  
+  .projects-layout nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    margin: 0px 0px;
+    align-items: center;
+    max-width: 390px;
+    
+  }
+  .projects-layout h2{
+    margin-left: 25%;
+    font-size: 2em;
+    text-align: start;
+  }
+  .projects-layout p{
+    text-align: start;
+    margin-left: -40px;
+  }
+    
+  .projects-layout nav a{
+   
+    font-size:14px ;
+    border: none;
+  }
+  .workoutApp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .workoutContent{
+    border: 2px solid lightgray;
+    width: 400px;
+  }
+  .workoutTop{
+    height: 85px;
+    background: lightgray;
+    color: red;
+  }
+  .workoutApp .workoutContent .workoutTop h1{
+    color: black;
+    text-align: center;
+  }
+  .workoutBot{
+    height: 100px;
+    border-top: 3px solid black;
+    background: lightgray; 
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .stack{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0;
+  }
+  .workoutApp .workoutContent .workoutBot a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .workoutApp .workoutContent .workoutBot .stack li {
+    list-style: none;
+    display: inline-block;
+    color: black;
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .workoutMid{
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .workoutApp .workoutContent .workoutMid img{
+    height: 250px;
+    width: 250px;
+  }
+  nav{
+    width: 300px;
+  }
+  
+  .workoutApp .workoutContent .workoutBot img{
+    height: 60px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .workoutApp .workoutContent .workoutBot img:hover{
+    transform: scale(1.1);
+  }
+  .launchers{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .dataContainer p{
+    color: black;
+    text-align: center;
+    margin-left: 3%;
+  }
+}
+
+@media (max-width: 800px){
+  header nav {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    font-size: 1em;
+    margin: 0px 0px;
+  }
+  .home{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    margin-top: 30%;
+    font-family: 'Open Sans', sans-serif;
+  }
+  .home .home-right{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: -30px;
+  }
+  .home .home-left{
+    width: 100%;
+  }
+  .home .home-left img{
+    height: 50px;
+   
+  }
+  .home .home-right img{
+    height: 300px;
+    border: black 3px solid;
+    border-radius: 50%;
+    margin-top: -60px;
+  }
+  
+  .text{
+    font-size: 25px;
+  }
+  .text2{
+    font-size: 20px;
+  }
+  .text3{
+    font-size: 20px;
+  }
+  .text3:hover{
+    font-size: 45px;
+    color: red;
+  }
+  .icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    margin-top: -50px;
+   
+  }
+  .icons img{
+    height: 100px;
+  }
+}
+
+@media (max-width: 1180px){
+  .home .home-right img{
+    height: 300px;
+    border: black 3px solid;
+    border-radius: 50%;
+    
+  }
+}
