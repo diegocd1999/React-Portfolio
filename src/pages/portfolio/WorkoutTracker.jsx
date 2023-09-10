@@ -16,6 +16,7 @@ export default function WorkoutTracker() {
                     </div>
                     <div className='workoutMid'>
                     <img src={orangeWeight} alt="" />
+                   
                     </div>
                     
                     <div className='workoutBot'>

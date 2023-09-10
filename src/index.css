@@ -442,6 +442,13 @@ form label span {
   width: 100%;
   height: 840px;
   background-color: black;
+  text-align: center;
+}
+.carousel a{
+  text-align: center;
+}
+.carousel h1{
+  text-align: center;
 }
 .carouselInner {
   height: 840px;
@@ -459,6 +466,9 @@ form label span {
   place-items: center;
   color: white;
   cursor: pointer;
+}
+.carouselInner .left img{
+  height: 50px;
 }
 .carouselInner .center{
   flex: 90%;
@@ -481,7 +491,9 @@ form label span {
   color: white;
   cursor: pointer;
 }
-
+.carouselInner .right img{
+  height: 50px;
+}
 
   .dataContainer{
   background: #DCDCDC;
