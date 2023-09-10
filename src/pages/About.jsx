@@ -30,21 +30,14 @@ export default function About() {
       <img src={python} alt="" />
       </div>
      
-      <p>I developed my love and passion for programming midway through my degree
-        doing vizualization with data in R. Since then, I've gravitated towards web development
-        with my strongest language being JavaScript. I enjoy learning various aspects of progra
-        , wheather developing simple static designs, full stack applications, web scrapping, or creating models.
+      <p>I developed my love and passion for programming midway through my degree doing visualization with data in R. Since then, I've gravitated towards web development with my strongest language being JavaScript. I enjoy learning various aspects of programming, from developing simple static designs, full stack applications, web scraping, or creating models.
       </p>
 
       <h3>A Brief History</h3>
-      <p>I am graduating this fall with a bachelors of business in Management Information Systems and Data Analytics from Texas A&M International University as a first generation student. I decided to persue this degree because 
-        it combined both my interests in computer science and business to lay the foundation of my knowledge. During my time here, I simultaniously managed to beceome a front desk supervisor at a Hilton Hotel 
-        given my previous experience and other roles. 
+      <p>I am graduating this fall with a bachelors of business in Management Information Systems and Data Analytics from Texas A&M International University as a first generation student. I decided to pursue this degree because it combined both my interests in computer science and business to lay the foundation of my knowledge. During my time here, I simultaneously managed to become a front desk supervisor at a Hilton Hotel given my previous experience and other roles.
       </p>
       <h4>Plans upon graduation</h4>
-      <p>I plan on persuing a role either as a developer or analyst given my skillset. Secondly, I want to persue a masters degree in computer science to learn more about the theoretical aspects
-        while further solidifying my skills. Having worked in various projects in academia both independant and with groups I've come to develop a lifelong passion for learning this field.
-      </p>
+      <p>I plan on pursuing a role either as a developer or analyst given my skill set. Secondly, I want to pursue a masters degree in computer science to learn more about the theoretical aspects while further solidifying my skills. Having worked in various projects in academia both independent and with groups I've come to develop a lifelong passion for learning this field.</p>
     </div>
     </AnimatedPage>
   )
