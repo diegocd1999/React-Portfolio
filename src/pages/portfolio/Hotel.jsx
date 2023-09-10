@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import images from "../../components/CarouselData"
-import  ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos"
-import  ArrowForwardIosIcon  from "@material-ui/icons/ArrowForwardIos"
+
 import rightArrow from "../../assets/rightArrow.svg"
 import leftArrow from "../../assets/leftArrow.svg"
 import hotelSlides from '../../assets/hotelSlides.pdf'
